@@ -8,13 +8,14 @@
     <meta name="author" content="Xi Luo" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        /* 统一所有图片大小 */
+        /* 统一所有图片大小 - 完整显示不裁剪 */
         .resize-image {
             width: 200px;
             height: 150px;
-            object-fit: cover;
+            object-fit: contain; /* 完整显示图片，不裁剪 */
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background-color: #f5f5f5; /* 如果有留白，显示浅灰背景 */
         }
         
         /* Photos of the Year 栏目样式 */
@@ -44,13 +45,14 @@
             margin-bottom: 1em;
         }
         
-        /* 统一图片大小 - 和 resize-image 一样 */
+        /* 统一图片大小 - 完整显示不裁剪 */
         .photo-gallery img {
             width: 200px;
             height: 150px;
-            object-fit: cover;
+            object-fit: contain; /* 完整显示图片，不裁剪 */
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background-color: #f5f5f5;
             transition: transform 0.3s ease;
         }
         
@@ -138,7 +140,40 @@
                     <p class="photo-description">
                         A year with old friends and new friends !
                     </p>
-                </div> <!-- 这里补上了缺失的闭合标签 -->
+                </div>
+                
+                <!-- 2023 -->
+                <div class="photo-year">
+                    <h3>2023</h3>
+                    <div class="photo-gallery">
+                        <img src="images/2023-1.jpg" alt="Photo 1" />
+                    </div>
+                    <p class="photo-description">
+                        这里写你2023年的描述...
+                    </p>
+                </div>
+                
+                <!-- 2020 -->
+                <div class="photo-year">
+                    <h3>2020</h3>
+                    <div class="photo-gallery">
+                        <img src="images/pic03.jpg" alt="Photo 1" />
+                    </div>
+                    <p class="photo-description">
+                        这里写你2020年的描述...
+                    </p>
+                </div>
+                
+                <!-- 2019 -->
+                <div class="photo-year">
+                    <h3>2019</h3>
+                    <div class="photo-gallery">
+                        <img src="images/2019-1.jpg" alt="Photo 1" />
+                    </div>
+                    <p class="photo-description">
+                        这里写你2019年的描述...
+                    </p>
+                </div>
                 
             </section>
 
