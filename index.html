@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML> 
 <html>
 <head>
     <title>Xi's Blog</title>
@@ -8,10 +8,13 @@
     <meta name="author" content="Xi Luo" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        /* 现有文章中的图片缩小 */
+        /* 统一所有图片大小 */
         .resize-image {
-            width: 40%;
-            height: auto;
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         
         /* Photos of the Year 栏目样式 */
@@ -41,6 +44,7 @@
             margin-bottom: 1em;
         }
         
+        /* 统一图片大小 - 和 resize-image 一样 */
         .photo-gallery img {
             width: 200px;
             height: 150px;
@@ -134,6 +138,7 @@
                     <p class="photo-description">
                         A year with old friends and new friends !
                     </p>
+                </div> <!-- 这里补上了缺失的闭合标签 -->
                 
             </section>
 
@@ -190,4 +195,3 @@
 
 </body>
 </html>
-
