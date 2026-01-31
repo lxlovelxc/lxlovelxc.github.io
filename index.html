@@ -1,15 +1,63 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Striped by HTML5 UP</title>
+    <title>Xi's Blog</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Xi Luo's personal blog about computational biology" />
+    <meta name="author" content="Xi Luo" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        /* Ensure all images with this class are 1/10 of their original size */
+        /* 现有文章中的图片缩小 */
         .resize-image {
-            width: 10%; /* Set width to 10% of the container */
-            height: auto; /* Maintain aspect ratio */
+            width: 40%;
+            height: auto;
+        }
+        
+        /* Photos of the Year 栏目样式 */
+        .photos-section {
+            margin-top: 2em;
+        }
+        
+        .photos-section h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        
+        .photo-year {
+            margin-bottom: 2em;
+        }
+        
+        .photo-year h3 {
+            color: #666;
+            margin-bottom: 0.5em;
+        }
+        
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 1em;
+        }
+        
+        .photo-gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        .photo-description {
+            color: #555;
+            font-style: italic;
+            margin-top: 0.5em;
         }
     </style>
 </head>
@@ -25,13 +73,12 @@
                     <h2><a href="#">Welcome to Xi's Blog</a></h2>
                 </header>
                 <div class="info">
-                    <span class="date"><span class="month">Nov<span>y</span></span> <span class="day">20</span><span class="year">, 2023</span></span>
+                    <span class="date"><span class="month">Nov</span> <span class="day">20</span><span class="year">, 2023</span></span>
                     <ul class="stats">
                         <li><a href="#" class="icon fa-comment">16</a></li>
                         <li><a href="#" class="icon fa-heart">32</a></li>
                     </ul>
                 </div>
-                <!-- Apply the resize class to pic05 -->
                 <a href="#" class="image featured"><img src="images/pic05.jpg" alt="Featured image" class="resize-image" /></a>
                 <p>
                     <strong>Hello!</strong> You're looking at <strong>Xi's Blog</strong>.
@@ -56,21 +103,51 @@
             <article class="box post post-excerpt">
                 <header>
                     <h2><a href="#">Where I come from</a></h2>
-                    <p>Capital for China more than thousand years</p>
+                    <p>Capital of China for more than a thousand years</p>
                 </header>
                 <div class="info">
-                    <span class="date"><span class="month">Nov<span>y</span></span> <span class="day">20</span><span class="year">, 2023</span></span>
+                    <span class="date"><span class="month">Nov</span> <span class="day">20</span><span class="year">, 2023</span></span>
                     <ul class="stats">
                         <li><a href="#" class="icon fa-comment">16</a></li>
                         <li><a href="#" class="icon fa-heart">32</a></li>
                     </ul>
                 </div>
-                <!-- Apply the resize class to pic04 -->
                 <a href="#" class="image featured"><img src="images/pic04.jpg" alt="Hometown Image" class="resize-image" /></a>
                 <p>
                     This is my hometown Xi'An, China
                 </p>
             </article>
+
+            <!-- Photos of the Year Section -->
+            <section id="photos" class="photos-section">
+                <h2>📷 Photos of the Year</h2>
+                
+                <!-- 2024 -->
+                <div class="photo-year">
+                    <h3>2024</h3>
+                    <div class="photo-gallery">
+                        <img src="images/2024-01.jpg" alt="Photo 1" />
+                        <img src="images/2024-02.jpg" alt="Photo 2" />
+                        <img src="images/2024-03.jpg" alt="Photo 3" />
+                    </div>
+                    <p class="photo-description">
+                        这里写你2024年照片的描述文字...
+                    </p>
+                </div>
+                
+                <!-- 2023 -->
+                <div class="photo-year">
+                    <h3>2023</h3>
+                    <div class="photo-gallery">
+                        <img src="images/2023-01.jpg" alt="Photo 1" />
+                        <img src="images/2023-02.jpg" alt="Photo 2" />
+                    </div>
+                    <p class="photo-description">
+                        这里写你2023年照片的描述文字...
+                    </p>
+                </div>
+                
+            </section>
 
         </div>
     </div>
@@ -85,7 +162,7 @@
         <nav id="nav">
             <ul>
                 <li class="current"><a href="#">Latest Post</a></li>
-                <li><a href="#">Archives</a></li>
+                <li><a href="#photos">Photos of the Year</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="https://github.com/lxlovelxc" target="_blank">Contact Me</a></li>
             </ul>
@@ -104,23 +181,14 @@
                 <h2>Recent Posts</h2>
             </header>
             <ul>
-                <li><a href="#">Where I come from</a></li> <!-- No ID link, as requested -->
-            </ul>
-        </section>
-
-        <!-- Recent Comments -->
-        <section class="box recent-comments">
-            <header>
-                <h2>Recent Comments</h2>
-            </header>
-            <ul>
-                
+                <li><a href="#">Where I come from</a></li>
+                <li><a href="#photos">Photos of the Year</a></li>
             </ul>
         </section>
 
         <!-- Copyright -->
         <ul id="copyright">
-            <li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Xi Luo.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
 
     </div>
